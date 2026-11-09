@@ -34,6 +34,7 @@ let areaQuadrilateral = 0.5 * d * (h1 + h2);
 console.log("The area of the quadrilateral is: " + areaQuadrilateral);
 
 // Area of A Rhombus 
+// Formula: 1/2 * d1 * d2
 let d1 = 12;
 let d2 = 5;
 
@@ -42,6 +43,7 @@ let areaRhombus = 0.5 * d1 * d2
 console.log("The area of the rhombus is: " + areaRhombus);
 
 // Area of A Trapezium
+// Formula: 1/2 * (a + b) * h
 let a = 12;
 let b = 5;
 let h = 20;
@@ -51,6 +53,7 @@ let areaTrapezium = 0.5 * (a + b) * h
 console.log("The area of the trapezium is: " + areaTrapezium);
 
 // Area of a Parallogram 
+// Formula: 1/2 * b * h
 let pbase = 12;
 let pheight = 5;
 
@@ -66,3 +69,11 @@ let userHeight = 5;
 let bmi = weight / (userHeight) ** 2
 
 console.log("The BMI is: " + bmi);
+
+// Test
+// let e = parseFloat(prompt("Enter the valua"))
+// let y = parseFloat(prompt("Enter the valua"))
+
+// let yen = e * y 
+
+// console.log(yen);
