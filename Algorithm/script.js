@@ -74,6 +74,6 @@ console.log("The BMI is: " + bmi);
 // let e = parseFloat(prompt("Enter the valua"))
 // let y = parseFloat(prompt("Enter the valua"))
 
-let yen = e * y 
+// let yen = e * y 
 
 // console.log(yen);
