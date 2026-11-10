@@ -71,7 +71,7 @@ let bmi = weight / (userHeight) ** 2
 console.log("The BMI is: " + bmi);
 
 // Test
-// let e = parseFloat(prompt("Enter the valua"))
+let e = parseFloat(prompt("Enter the valua"))
 // let y = parseFloat(prompt("Enter the valua"))
 
 // let yen = e * y 
