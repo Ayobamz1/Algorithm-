@@ -111,3 +111,9 @@ buttonS.addEventListener("click", function () {
   let area = s ** 2;
   resultS.innerHTML = area + " cm**2";
 });
+
+// Area of A Circle
+// Formula: Math.PI * r ** 2
+
+let radius 
+
