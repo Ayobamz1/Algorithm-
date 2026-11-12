@@ -85,15 +85,31 @@
 let base = document.getElementById('base');
 let height = document.getElementById('height');
 
-let button = document.getElementById('triangleButton');
-let result = document.getElementById('triangleResult');
+let buttonT = document.getElementById('triangleButton');
+let resultT = document.getElementById('triangleResult');
 
-button.addEventListener("click", function() {
+buttonT.addEventListener("click", function() {
     let b = Number(base.value);
     let h = Number(height.value);
 
     let area = (b * h) / 2;
 
-    result.innerHTML = area + " cm**2"
-}
-)
+    resultT.textContent = area + " cm**2"
+})
+
+// Area of Square 
+// Formula: l ** 2
+
+let side = document.getElementById('side');
+
+let buttonS = document.getElementById('squareButton');
+
+let resultS = document.getElementById('squareResult');
+
+buttonS.addEventListener("click", function() {
+    let s = Number(side.value);
+
+    let area = s ** 2;
+
+    resultS.innerHTML = area + " cm**2"
+})
