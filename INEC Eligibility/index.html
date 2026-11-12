@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div
+      class="col-4 mt-4 col-lg-4 col-md-6 col-sm-6 my-auto mx-auto p-4 p-lg-5 border shadow"
+    >
+      <h3 class="text-decoration-underline fs-4 text-center">
+        INEC Eligibilty Checker
+      </h3>
+      <input
+        type="number"
+        id="input"
+        placeholder="Enter your birth year"
+        class="form-control form-control-sm shadow-none"
+      />
+      <div class="text-center mt-4" id="display">
+        Your result will show here
+      </div>
+      <button
+        onclick="check()"
+        class="btn mt-4 btn-dark d-block mx-auto"
+        id="check"
+      >
+        Check Eligibility
+      </button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
