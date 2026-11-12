@@ -1,4 +1,4 @@
-// // Area of A Triangle 
+// // Area of A Triangle
 // // Formula: 1/2 * b * h
 // let base = 12;
 // let height = 5;
@@ -23,7 +23,7 @@
 
 // console.log("The area of the circle is: " + areaCircle);
 
-// // Area of A Quadrilateral 
+// // Area of A Quadrilateral
 // // Formula: 1/2 * d * (h1 + h2)
 // let d = 5;
 // let h1 = 4;
@@ -33,7 +33,7 @@
 
 // console.log("The area of the quadrilateral is: " + areaQuadrilateral);
 
-// // Area of A Rhombus 
+// // Area of A Rhombus
 // // Formula: 1/2 * d1 * d2
 // let d1 = 12;
 // let d2 = 5;
@@ -52,7 +52,7 @@
 
 // console.log("The area of the trapezium is: " + areaTrapezium);
 
-// // Area of a Parallogram 
+// // Area of a Parallogram
 // // Formula: 1/2 * b * h
 // let pbase = 12;
 // let pheight = 5;
@@ -74,41 +74,40 @@
 // // let e = parseFloat(prompt("Enter the value"))
 // // let y = parseFloat(prompt("Enter the value"))
 
-// // let yen = e * y 
+// // let yen = e * y
 
 // // console.log(yen);
 
-
-// Arae of Triangle 
+// Arae of Triangle
 // Formula: 1/2 * b * h
 
-let base = document.getElementById('base');
-let height = document.getElementById('height');
+let base = document.getElementById("base");
+let height = document.getElementById("height");
 
-let buttonT = document.getElementById('triangleButton');
-let resultT = document.getElementById('triangleResult');
+let buttonT = document.getElementById("triangleButton");
+let resultT = document.getElementById("triangleResult");
 
-buttonT.addEventListener("click", function() {
-    let b = Number(base.value);
-    let h = Number(height.value);
+buttonT.addEventListener("click", function () {
+  let b = Number(base.value);
+  let h = Number(height.value);
 
-    let area = (b * h) / 2;
+  let area = (b * h) / 2;
 
-    resultT.textContent = area + " cm**2"
-})
+  resultT.textContent = area + " cm**2";
+});
 
-// Area of Square 
+// Area of Square
 // Formula: l ** 2
 
-let side = document.getElementById('side');
+let side = document.getElementById("side");
 
-let buttonS = document.getElementById('squareButton');
+let buttonS = document.getElementById("squareButton");
 
-let resultS = document.getElementById('squareResult');
+let resultS = document.getElementById("squareResult");
 
-buttonS.addEventListener("click", function() {
-    let s = Number(side.value);
+buttonS.addEventListener("click", function () {
+  let s = Number(side.value);
 
-    let area = s ** 2;
-    resultS.innerHTML = area + " cm**2"
-})
+  let area = s ** 2;
+  resultS.innerHTML = area + " cm**2";
+});
