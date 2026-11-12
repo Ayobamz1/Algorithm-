@@ -110,6 +110,5 @@ buttonS.addEventListener("click", function() {
     let s = Number(side.value);
 
     let area = s ** 2;
-
     resultS.innerHTML = area + " cm**2"
 })
