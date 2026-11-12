@@ -79,3 +79,21 @@
 // // console.log(yen);
 
 
+// Arae of Triangle 
+// Formula: 1/2 * b * h
+
+let base = document.getElementById('base');
+let height = document.getElementById('height');
+
+let button = document.getElementById('triangleButton');
+let result = document.getElementById('triangleResult');
+
+button.addEventListener("click", function() {
+    let b = Number(base.value);
+    let h = Number(height.value);
+
+    let area = (b * h) / 2;
+
+    result.innerHTML = area + " cm**2"
+}
+)
