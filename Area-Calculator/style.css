@@ -76,3 +76,15 @@ button:hover {
   font-weight: bold;
   text-align: center;
 }
+
+#circleResult {
+  margin-top: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#quadResult {
+  margin-top: 20px;
+  font-weight: bold;
+  text-align: center;
+}

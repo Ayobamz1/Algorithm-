@@ -1,11 +1,5 @@
-// // Area of A Triangle
-// // Formula: 1/2 * b * h
-// let base = 12;
-// let height = 5;
 
-// let areaTriangle = 0.5 * base * height
 
-// console.log("The area of the traingle is: " + areaTriangle);
 
 // // Area of A Square
 // // Formula: l ** 2
@@ -117,5 +111,36 @@ buttonS.addEventListener("click", function () {
 
 let radius = document.getElementById('radius');
 
-let 
+let buttonC = document.getElementById('circleButton');
+let resultC = document.getElementById('circleResult');
 
+buttonC.addEventListener("click", function() {
+  let r = Number(radius.value)
+
+  let area = Math.PI * r ** 2
+
+  resultC.textContent = area + " cm**2"
+});
+
+// Area of A Quadrilateral
+// Formula: 1/2 * d * (h1 + h2)
+
+let lenght = document.getElementById('length');
+
+let heigth1 = document.getElementById('heigth1');
+let heigth2 = document.getElementById('heigth2');
+
+let buttonQ = document.getElementById('quadButton');
+let resultQ = document.getElementById('quadResult');
+
+buttonQ.addEventListener("click", function() {
+  let d = Number(lenght.value);
+
+  let h1 = Number(heigth1.value);
+
+  let h2 = Number(heigth2.value);
+
+  let area = 0.5 * d * (h1 + h2);
+
+  resultQ.innerHTML = area + " cm**2"
+})
