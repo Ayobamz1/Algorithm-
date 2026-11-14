@@ -1,48 +1,510 @@
+/* =====================================
+   GradeWise - simple stylesheet
+   ===================================== */
+
+/* ---------- General settings ---------- */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.heading {
-    background: green;
-    font-family: monospace;
-    font-size: 1rem;
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6fb;
+  color: #333333;
+  line-height: 1.6;
 }
 
-nav {
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    padding: 1rem 5rem;
-    max-width: 1100px;
-    margin: 0 auto;
+a {
+  text-decoration: none;
 }
 
-nav .logo h2 {
-    font-weight: 600;
-    color: #ffff;
-    cursor: pointer;
+ul {
+  list-style: none;
 }
 
-nav li {
-    list-style: none;
-    display: inline;
+/* keeps the content in the middle of the page */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-li a {
-    text-decoration: none;
-    color: #ffff;
-    margin-left: 50px;
-    padding-bottom: 0.5rem;
+/* ---------- Navbar ---------- */
+.navbar {
+  background-color: #0f1b3d;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-li a:hover {
-    border-bottom: 1px solid #ffff;
+.nav-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-section.hero-section {
-    margin: 2rem;
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+  color: white;
+}
+
+.logo span {
+  color: #f59e0b;
+}
+
+.nav-links a {
+  color: #cbd5e1;
+  padding: 8px 16px;
+  border-radius: 20px;
+  margin-left: 5px;
+  display: inline-block;
+}
+
+.nav-links a:hover {
+  background-color: #2a3a6b;
+  color: white;
+}
+
+.nav-links a.active {
+  background-color: #4f46e5;
+  color: white;
+}
+
+/* ---------- Welcome page (hero) ---------- */
+.hero {
+  background: linear-gradient(135deg, #0f1b3d, #4f46e5, #7c3aed);
+  color: white;
+  text-align: center;
+  padding: 100px 0;
+}
+
+.badge {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 6px 18px;
+  border-radius: 20px;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.hero h1 span {
+  color: #f59e0b;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+  font-size: 18px;
+  color: #e0e7ff;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+.btn-primary {
+  background-color: #f59e0b;
+  color: #222222;
+}
+
+.btn-outline {
+  border: 2px solid white;
+  color: white;
+  margin-left: 10px;
+}
+
+.btn-outline:hover {
+  background-color: white;
+  color: #0f1b3d;
+  opacity: 1;
+}
+
+.btn-dark {
+  background-color: #4f46e5;
+  color: white;
+}
+
+.btn-light {
+  background-color: #e5e7eb;
+  color: #333333;
+  margin-right: 8px;
+}
+
+/* ---------- Inner page header ---------- */
+.page-header {
+  color: white;
+  text-align: center;
+  padding: 70px 0;
+}
+
+.page-header h1 {
+  font-size: 38px;
+  margin-bottom: 10px;
+}
+
+.page-header p {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 17px;
+}
+
+.header-secondary {
+  background: linear-gradient(135deg, #0d9488, #14b8a6);
+}
+
+.header-university {
+  background: linear-gradient(135deg, #1e3a8a, #6d28d9);
+}
+
+.header-poly {
+  background: linear-gradient(135deg, #b45309, #f59e0b);
+}
+
+/* ---------- Sections ---------- */
+section {
+  padding: 50px 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.section-title h2 {
+  font-size: 30px;
+  color: #0f1b3d;
+}
+
+.section-title p {
+  color: #6b7280;
+}
+
+/* ---------- Cards (welcome page) ---------- */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  padding-top: 50px;
+}
+
+.card {
+  flex: 1 1 280px;
+  background-color: white;
+  padding: 30px 25px;
+  border-radius: 15px;
+  text-align: center;
+  border-top: 6px solid #4f46e5;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card .icon {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  color: #0f1b3d;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+.c-secondary {
+  border-top-color: #14b8a6;
+}
+
+.c-university {
+  border-top-color: #4f46e5;
+}
+
+.c-poly {
+  border-top-color: #f59e0b;
+}
+
+/* ---------- Feature boxes ---------- */
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.feature {
+  flex: 1 1 220px;
+  background-color: white;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.feature .icon {
+  font-size: 36px;
+}
+
+.feature h4 {
+  margin: 8px 0 4px 0;
+  color: #0f1b3d;
+}
+
+.feature p {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* ---------- Grading tables ---------- */
+.first-section {
+  padding-top: 40px;
+}
+
+.table-wrap {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background-color: #0f1b3d;
+  color: white;
+  padding: 15px;
+  text-align: left;
+}
+
+td {
+  padding: 13px 15px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+tr:hover td {
+  background-color: #eef2ff;
+}
+
+/* the small coloured grade labels */
+.grade {
+  display: inline-block;
+  min-width: 42px;
+  text-align: center;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  color: white;
+}
+
+.g-top {
+  background-color: #22c55e;
+}
+
+.g-good {
+  background-color: #3b82f6;
+}
+
+.g-mid {
+  background-color: #f59e0b;
+}
+
+.g-low {
+  background-color: #fb923c;
+}
+
+.g-fail {
+  background-color: #ef4444;
+}
+
+/* ---------- Degree / award class boxes ---------- */
+.honours {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.honour {
+  flex: 1 1 180px;
+  background-color: white;
+  padding: 22px 15px;
+  border-radius: 15px;
+  text-align: center;
+  border-bottom: 5px solid #4f46e5;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.honour h4 {
+  color: #0f1b3d;
+}
+
+.honour .range {
+  font-size: 22px;
+  font-weight: bold;
+  color: #4f46e5;
+}
+
+.honour small {
+  color: #6b7280;
+}
+
+/* colours for the polytechnic award boxes */
+.honour-green {
+  border-bottom-color: #22c55e;
+}
+
+.honour-blue {
+  border-bottom-color: #3b82f6;
+}
+
+.honour-yellow {
+  border-bottom-color: #f59e0b;
+}
+
+.honour-orange {
+  border-bottom-color: #fb923c;
+}
+
+/* ---------- Note box ---------- */
+.note {
+  background-color: #fff8e6;
+  border-left: 5px solid #f59e0b;
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+  color: #6b4a00;
+}
+
+/* ---------- Calculator (for your JS) ---------- */
+.calculator {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.calculator h3 {
+  color: #0f1b3d;
+  margin-bottom: 5px;
+}
+
+.calculator > p {
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+.course-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+/* the first box (course name) is wider */
+.course-row input:first-child {
+  flex: 2;
+}
+
+.course-row input {
+  flex: 1;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #dddddd;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #4f46e5;
+}
+
+.calc-actions {
+  margin-top: 15px;
+}
+
+.result-box {
+  margin-top: 25px;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #eef2ff;
+  text-align: center;
+  border: 2px dashed #a5b4fc;
+}
+
+.result-box h4 {
+  color: #6b7280;
+}
+
+.result-box .big {
+  font-size: 38px;
+  font-weight: bold;
+  color: #4f46e5;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background-color: #0f1b3d;
+  color: #aab4c8;
+  text-align: center;
+  padding: 25px 0;
+  margin-top: 30px;
+}
+
+footer strong {
+  color: white;
+}
+
+/* ---------- Small screens (phones) ---------- */
+@media (max-width: 600px) {
+  .nav-inner {
+    justify-content: center;
+  }
+
+  .nav-links {
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .btn-outline {
+    margin: 10px 0 0 0;
+  }
+
+  .course-row {
+    flex-direction: column;
+  }
 }

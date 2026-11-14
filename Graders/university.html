@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>University Grading | GradeWise</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">Grade<span>Wise</span></a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="secondary.html">Secondary School</a>
+        <a href="university.html" class="active">University</a>
+        <a href="polytechnic.html">Polytechnic</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-header header-university">
+    <div class="container">
+      <h1>🎓 University Grading System</h1>
+      <p>The 5-point scale used by Nigerian universities to calculate GPA and CGPA.</p>
+    </div>
+  </div>
+
+  <main class="container">
+
+    <!-- GRADING TABLE -->
+    <section class="first-section">
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Score (%)</th>
+              <th>Grade</th>
+              <th>Grade Point</th>
+              <th>Remark</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>70 – 100</td><td><span class="grade g-top">A</span></td><td>5.0</td><td>Excellent</td></tr>
+            <tr><td>60 – 69</td><td><span class="grade g-good">B</span></td><td>4.0</td><td>Very Good</td></tr>
+            <tr><td>50 – 59</td><td><span class="grade g-mid">C</span></td><td>3.0</td><td>Good</td></tr>
+            <tr><td>45 – 49</td><td><span class="grade g-low">D</span></td><td>2.0</td><td>Fair</td></tr>
+            <tr><td>40 – 44</td><td><span class="grade g-low">E</span></td><td>1.0</td><td>Pass</td></tr>
+            <tr><td>0 – 39</td><td><span class="grade g-fail">F</span></td><td>0.0</td><td>Fail</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="note">
+        💡 <strong>Formula:</strong> GPA = Total Quality Points &divide; Total Credit Units, where
+        Quality Points = Grade Point &times; Credit Unit of each course.
+      </div>
+    </section>
+
+    <!-- DEGREE CLASSES -->
+    <section>
+      <div class="section-title">
+        <h2>Classes of Degree</h2>
+        <p>Your final CGPA decides your degree classification.</p>
+      </div>
+
+      <div class="honours">
+        <div class="honour">
+          <h4>First Class</h4>
+          <div class="range">4.50 – 5.00</div>
+          <small>Highest honour</small>
+        </div>
+        <div class="honour">
+          <h4>Second Class Upper</h4>
+          <div class="range">3.50 – 4.49</div>
+          <small>2:1 Division</small>
+        </div>
+        <div class="honour">
+          <h4>Second Class Lower</h4>
+          <div class="range">2.40 – 3.49</div>
+          <small>2:2 Division</small>
+        </div>
+        <div class="honour">
+          <h4>Third Class</h4>
+          <div class="range">1.50 – 2.39</div>
+          <small>Third Division</small>
+        </div>
+        <div class="honour">
+          <h4>Pass</h4>
+          <div class="range">1.00 – 1.49</div>
+          <small>Ordinary pass</small>
+        </div>
+      </div>
+    </section>
+
+    <!-- CALCULATOR -->
+    <section>
+      <div class="section-title">
+        <h2>GPA Calculator</h2>
+        <p>Enter your courses, credit units and scores.</p>
+      </div>
+
+      <div class="calculator">
+        <h3>Calculate Your GPA</h3>
+        <p>Add all the courses you took this semester.</p>
+
+        <form id="university-form">
+          <div id="courses-container">
+            <div class="course-row">
+              <input type="text" class="course-name" placeholder="Course (e.g. MTH101)">
+              <input type="number" class="course-unit" placeholder="Credit Unit" min="1" max="6">
+              <input type="number" class="course-score" placeholder="Score (0 - 100)" min="0" max="100">
+            </div>
+          </div>
+
+          <div class="calc-actions">
+            <button type="button" id="add-course-btn" class="btn btn-light">+ Add Course</button>
+            <button type="button" id="calculate-gpa-btn" class="btn btn-dark">Calculate GPA</button>
+          </div>
+        </form>
+
+        <div class="result-box" id="university-result">
+          <h4>Your GPA</h4>
+          <div class="big" id="university-gpa">--</div>
+          <p id="university-class">Degree class will show here</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 <strong>GradeWise</strong> &bull; School Grading System Project</p>
+    </div>
+  </footer>
+
+</body>
+</html>

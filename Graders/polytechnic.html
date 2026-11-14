@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Polytechnic Grading | GradeWise</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">Grade<span>Wise</span></a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="secondary.html">Secondary School</a>
+        <a href="university.html">University</a>
+        <a href="polytechnic.html" class="active">Polytechnic</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-header header-poly">
+    <div class="container">
+      <h1>🛠️ Polytechnic Grading System</h1>
+      <p>The 4-point scale used for National Diploma (ND) and Higher National Diploma (HND).</p>
+    </div>
+  </div>
+
+  <main class="container">
+
+    <!-- GRADING TABLE -->
+    <section class="first-section">
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Score (%)</th>
+              <th>Grade</th>
+              <th>Grade Point</th>
+              <th>Remark</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>75 – 100</td><td><span class="grade g-top">A</span></td><td>4.00</td><td>Distinction</td></tr>
+            <tr><td>70 – 74</td><td><span class="grade g-top">AB</span></td><td>3.50</td><td>Upper Credit</td></tr>
+            <tr><td>65 – 69</td><td><span class="grade g-good">B</span></td><td>3.25</td><td>Credit</td></tr>
+            <tr><td>60 – 64</td><td><span class="grade g-good">BC</span></td><td>3.00</td><td>Credit</td></tr>
+            <tr><td>55 – 59</td><td><span class="grade g-mid">C</span></td><td>2.75</td><td>Lower Credit</td></tr>
+            <tr><td>50 – 54</td><td><span class="grade g-mid">CD</span></td><td>2.50</td><td>Lower Credit</td></tr>
+            <tr><td>45 – 49</td><td><span class="grade g-low">D</span></td><td>2.25</td><td>Pass</td></tr>
+            <tr><td>40 – 44</td><td><span class="grade g-low">E</span></td><td>2.00</td><td>Pass</td></tr>
+            <tr><td>0 – 39</td><td><span class="grade g-fail">F</span></td><td>0.00</td><td>Fail</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="note">
+        💡 <strong>Note:</strong> Some polytechnics use slightly different score bands, so always confirm with your
+        school's handbook. This page follows the commonly used ND/HND scheme.
+      </div>
+    </section>
+
+    <!-- AWARD CLASSES -->
+    <section>
+      <div class="section-title">
+        <h2>Classes of Award</h2>
+        <p>Your final CGPA decides your ND / HND classification.</p>
+      </div>
+
+      <div class="honours">
+        <div class="honour honour-green">
+          <h4>Distinction</h4>
+          <div class="range">3.50 – 4.00</div>
+          <small>Highest award</small>
+        </div>
+        <div class="honour honour-blue">
+          <h4>Upper Credit</h4>
+          <div class="range">3.00 – 3.49</div>
+          <small>Very good performance</small>
+        </div>
+        <div class="honour honour-yellow">
+          <h4>Lower Credit</h4>
+          <div class="range">2.50 – 2.99</div>
+          <small>Good performance</small>
+        </div>
+        <div class="honour honour-orange">
+          <h4>Pass</h4>
+          <div class="range">2.00 – 2.49</div>
+          <small>Satisfactory</small>
+        </div>
+      </div>
+    </section>
+
+    <!-- CALCULATOR -->
+    <section>
+      <div class="section-title">
+        <h2>GPA Calculator</h2>
+        <p>Enter your courses, credit units and scores.</p>
+      </div>
+
+      <div class="calculator">
+        <h3>Calculate Your GPA</h3>
+        <p>Add all the courses you took this semester.</p>
+
+        <form id="poly-form">
+          <div id="poly-courses-container">
+            <div class="course-row">
+              <input type="text" class="course-name" placeholder="Course (e.g. COM111)">
+              <input type="number" class="course-unit" placeholder="Credit Unit" min="1" max="6">
+              <input type="number" class="course-score" placeholder="Score (0 - 100)" min="0" max="100">
+            </div>
+          </div>
+
+          <div class="calc-actions">
+            <button type="button" id="add-poly-course-btn" class="btn btn-light">+ Add Course</button>
+            <button type="button" id="calculate-poly-gpa-btn" class="btn btn-dark">Calculate GPA</button>
+          </div>
+        </form>
+
+        <div class="result-box" id="poly-result">
+          <h4>Your GPA</h4>
+          <div class="big" id="poly-gpa">--</div>
+          <p id="poly-class">Award class will show here</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 <strong>GradeWise</strong> &bull; School Grading System Project</p>
+    </div>
+  </footer>
+
+</body>
+</html>

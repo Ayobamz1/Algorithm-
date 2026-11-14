@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Secondary School Grading | GradeWise</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">Grade<span>Wise</span></a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="secondary.html" class="active">Secondary School</a>
+        <a href="university.html">University</a>
+        <a href="polytechnic.html">Polytechnic</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-header header-secondary">
+    <div class="container">
+      <h1>🏫 Secondary School Grading</h1>
+      <p>The A1 – F9 scale used by WAEC, NECO and most Nigerian secondary schools.</p>
+    </div>
+  </div>
+
+  <main class="container">
+
+    <!-- GRADING TABLE -->
+    <section class="first-section">
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Score (%)</th>
+              <th>Grade</th>
+              <th>Remark</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>75 – 100</td><td><span class="grade g-top">A1</span></td><td>Excellent</td></tr>
+            <tr><td>70 – 74</td><td><span class="grade g-top">B2</span></td><td>Very Good</td></tr>
+            <tr><td>65 – 69</td><td><span class="grade g-good">B3</span></td><td>Good</td></tr>
+            <tr><td>60 – 64</td><td><span class="grade g-good">C4</span></td><td>Credit</td></tr>
+            <tr><td>55 – 59</td><td><span class="grade g-good">C5</span></td><td>Credit</td></tr>
+            <tr><td>50 – 54</td><td><span class="grade g-mid">C6</span></td><td>Credit</td></tr>
+            <tr><td>45 – 49</td><td><span class="grade g-low">D7</span></td><td>Pass</td></tr>
+            <tr><td>40 – 44</td><td><span class="grade g-low">E8</span></td><td>Pass</td></tr>
+            <tr><td>0 – 39</td><td><span class="grade g-fail">F9</span></td><td>Fail</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="note">
+        💡 <strong>Tip:</strong> A <strong>credit pass</strong> means a grade of C6 or better. Most universities require
+        at least five credits, including English and Mathematics, for admission.
+      </div>
+    </section>
+
+    <!-- CALCULATOR -->
+    <section>
+      <div class="section-title">
+        <h2>Check Your Grade</h2>
+        <p>Enter a subject and your score to see the grade.</p>
+      </div>
+
+      <div class="calculator">
+        <h3>Subject Grade Checker</h3>
+        <p>Add as many subjects as you like.</p>
+
+        <form id="secondary-form">
+          <div id="subjects-container">
+            <div class="course-row two-col">
+              <input type="text" class="subject-name" placeholder="Subject (e.g. Mathematics)">
+              <input type="number" class="subject-score" placeholder="Score (0 - 100)" min="0" max="100">
+            </div>
+          </div>
+
+          <div class="calc-actions">
+            <button type="button" id="add-subject-btn" class="btn btn-light">+ Add Subject</button>
+            <button type="button" id="check-grade-btn" class="btn btn-dark">Check Grades</button>
+          </div>
+        </form>
+
+        <div class="result-box" id="secondary-result">
+          <h4>Your Result</h4>
+          <div class="big" id="secondary-result-text">--</div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 <strong>GradeWise</strong> &bull; School Grading System Project</p>
+    </div>
+  </footer>
+
+</body>
+</html>
