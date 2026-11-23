@@ -4,167 +4,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nexa | Smart Calculator</title>
+    <title>Nexa Calculator</title>
     <link rel="stylesheet" href="style.css">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <main class="app-container">
+    <div class="container">
 
         <div class="calculator">
 
             <!-- Header -->
-            <header class="calculator-header">
+            <div class="header">
+                <div class="logo">N</div>
+
                 <div class="brand">
-                    <div class="brand-icon">N</div>
-                    <div>
-                        <h2>Nexa</h2>
-                        <span>SMART CALCULATOR</span>
-                    </div>
+                    <h2>Nexa</h2>
+                    <p>SMART CALCULATOR</p>
                 </div>
 
-                <button class="theme-button" type="button">
-                    ☼
-                </button>
-            </header>
+                <button class="theme-button" id="theme">☼</button>
+            </div>
 
 
-            <!-- Display -->
-            <section class="display-section">
+            <!-- Calculator Display -->
+            <div class="display">
 
-                <div class="display-label">
+                <div class="display-top">
                     <span>DISPLAY</span>
-                    <span class="status">
-                        <span class="status-dot"></span>
-                        READY
-                    </span>
+                    <span>● READY</span>
                 </div>
 
-                <div class="previous-value" id="previous-value">
-                    0
-                </div>
+                <p id="previous-display">0</p>
 
-                <div class="current-value" id="display">
-                    0
-                </div>
+                <h1 id="current-display">0</h1>
 
-                <div class="display-footer">
+                <div class="display-bottom">
                     <span>RESULT</span>
                     <span>DEC</span>
                 </div>
 
-            </section>
+            </div>
 
 
-            <!-- Keypad -->
-            <section class="keypad">
+            <!-- Calculator Buttons -->
+            <div class="buttons">
 
-                <!-- First Row -->
-                <button class="key function-key" data-action="clear" type="button">
-                    AC
-                </button>
+                <!-- Row 1 -->
+                <button class="function" id="clear">AC</button>
+                <button class="function" id="delete">DEL</button>
+                <button class="function" id="percent">%</button>
+                <button class="operator" id="divide">÷</button>
 
-                <button class="key function-key" data-action="delete" type="button">
-                    DEL
-                </button>
+                <!-- Row 2 -->
+                <button class="number" id="seven">7</button>
+                <button class="number" id="eight">8</button>
+                <button class="number" id="nine">9</button>
+                <button class="operator" id="multiply">×</button>
 
-                <button class="key function-key" data-action="percent" type="button">
-                    %
-                </button>
+                <!-- Row 3 -->
+                <button class="number" id="four">4</button>
+                <button class="number" id="five">5</button>
+                <button class="number" id="six">6</button>
+                <button class="operator" id="subtract">−</button>
 
-                <button class="key operator-key" data-operator="/" type="button">
-                    ÷
-                </button>
+                <!-- Row 4 -->
+                <button class="number" id="one">1</button>
+                <button class="number" id="two">2</button>
+                <button class="number" id="three">3</button>
+                <button class="operator" id="add">+</button>
 
+                <!-- Row 5 -->
+                <button class="number zero" id="zero">0</button>
+                <button class="number" id="decimal">.</button>
+                <button class="equals" id="equals">=</button>
 
-                <!-- Second Row -->
-                <button class="key number-key" data-number="7" type="button">
-                    7
-                </button>
-
-                <button class="key number-key" data-number="8" type="button">
-                    8
-                </button>
-
-                <button class="key number-key" data-number="9" type="button">
-                    9
-                </button>
-
-                <button class="key operator-key" data-operator="*" type="button">
-                    ×
-                </button>
-
-
-                <!-- Third Row -->
-                <button class="key number-key" data-number="4" type="button">
-                    4
-                </button>
-
-                <button class="key number-key" data-number="5" type="button">
-                    5
-                </button>
-
-                <button class="key number-key" data-number="6" type="button">
-                    6
-                </button>
-
-                <button class="key operator-key" data-operator="-" type="button">
-                    −
-                </button>
-
-
-                <!-- Fourth Row -->
-                <button class="key number-key" data-number="1" type="button">
-                    1
-                </button>
-
-                <button class="key number-key" data-number="2" type="button">
-                    2
-                </button>
-
-                <button class="key number-key" data-number="3" type="button">
-                    3
-                </button>
-
-                <button class="key operator-key" data-operator="+" type="button">
-                    +
-                </button>
-
-
-                <!-- Fifth Row -->
-                <button class="key number-key zero-key" data-number="0" type="button">
-                    0
-                </button>
-
-                <button class="key number-key" data-action="decimal" type="button">
-                    .
-                </button>
-
-                <button class="key equals-key" data-action="calculate" type="button">
-                    =
-                </button>
-
-            </section>
+            </div>
 
 
             <!-- Footer -->
-            <footer class="calculator-footer">
+            <div class="footer">
                 <span>Designed with precision</span>
                 <span>v1.0.0</span>
-            </footer>
+            </div>
 
         </div>
 
-        <p class="copyright">
-            © 2026 Nexa Calculator. All rights reserved.
-        </p>
+        <p class="copyright">© 2026 Nexa Calculator. All rights reserved.</p>
 
-    </main>
+    </div>
 
+    <script src="script.js"></script>
 </body>
 </html>

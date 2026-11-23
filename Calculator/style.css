@@ -1,7 +1,5 @@
 
-/* =========================
-   GENERAL STYLING
-========================= */
+/* GENERAL STYLING */
 
 * {
     margin: 0;
@@ -12,413 +10,239 @@
 body {
     font-family: 'Inter', sans-serif;
     background: #080b18;
-    color: #ffffff;
-    min-height: 100vh;
+    color: white;
 }
 
 
-/* =========================
-   BACKGROUND
-========================= */
+/* MAIN CONTAINER */
 
-.app-container {
+.container {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 40px 20px;
+    padding: 20px;
 
-    background:
-        radial-gradient(
-            circle at 15% 20%,
-            rgba(91, 63, 190, 0.18),
-            transparent 35%
-        ),
-        radial-gradient(
-            circle at 85% 80%,
-            rgba(32, 115, 220, 0.15),
-            transparent 35%
-        ),
-        #080b18;
+    background: radial-gradient(circle, #202044, #080b18 70%);
 }
 
 
-/* =========================
-   CALCULATOR CONTAINER
-========================= */
+/* CALCULATOR */
 
 .calculator {
     width: 100%;
     max-width: 390px;
+    background: #14192e;
     padding: 25px;
-
-    background: rgba(20, 25, 46, 0.88);
-
-    border: 1px solid rgba(255, 255, 255, 0.09);
-
-    border-radius: 28px;
-
-    box-shadow:
-        0 25px 80px rgba(0, 0, 0, 0.45),
-        0 0 40px rgba(104, 76, 220, 0.08);
-
-    backdrop-filter: blur(20px);
+    border-radius: 25px;
+    border: 1px solid #303653;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
 }
 
 
-/* =========================
-   HEADER
-========================= */
+/* HEADER */
 
-.calculator-header {
+.header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     margin-bottom: 30px;
 }
 
-.brand {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.brand-icon {
+.logo {
     width: 43px;
     height: 43px;
+    background: linear-gradient(135deg, #8055f7, #397cf6);
+    border-radius: 12px;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    background: linear-gradient(
-        135deg,
-        #8055f7,
-        #397cf6
-    );
-
-    border-radius: 13px;
-
     font-size: 22px;
     font-weight: 800;
+}
 
-    box-shadow: 0 5px 20px rgba(110, 83, 245, 0.35);
+.brand {
+    margin-left: 12px;
 }
 
 .brand h2 {
     font-size: 19px;
-    font-weight: 700;
-    letter-spacing: -0.5px;
 }
 
-.brand span {
-    display: block;
+.brand p {
     font-size: 9px;
     color: #858ba8;
-    letter-spacing: 1.5px;
+    letter-spacing: 1px;
     margin-top: 4px;
 }
 
 .theme-button {
+    margin-left: auto;
     width: 40px;
     height: 40px;
-
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 12px;
-
+    border: none;
+    border-radius: 10px;
     background: #252b46;
-    color: #b8a5ff;
-
+    color: #b9a8ff;
     font-size: 22px;
     cursor: pointer;
-
-    transition: 0.3s;
-}
-
-.theme-button:hover {
-    background: #353d60;
-    transform: rotate(20deg);
 }
 
 
-/* =========================
-   DISPLAY SECTION
-========================= */
+/* DISPLAY */
 
-.display-section {
+.display {
     background: #10152b;
-
-    border: 1px solid rgba(255, 255, 255, 0.06);
-
-    border-radius: 20px;
-
     padding: 20px;
-
+    border-radius: 18px;
     margin-bottom: 25px;
-
     min-height: 165px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    overflow: hidden;
 }
 
-.display-label,
-.display-footer {
+.display-top {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-}
-
-.display-label {
-    font-size: 10px;
     color: #858ba8;
-    letter-spacing: 1.5px;
-    font-weight: 600;
+    font-size: 10px;
+    letter-spacing: 1px;
 }
 
-.status {
-    display: flex;
-    align-items: center;
-    gap: 6px;
+.display-top span:last-child {
+    color: #42d99b;
 }
 
-.status-dot {
-    width: 7px;
-    height: 7px;
-
-    background: #42d99b;
-    border-radius: 50%;
-
-    box-shadow: 0 0 10px #42d99b;
-}
-
-.previous-value {
+#previous-display {
     text-align: right;
     color: #777e9e;
     font-size: 17px;
-    min-height: 22px;
-    margin-top: 18px;
+    margin-top: 20px;
 }
 
-.current-value {
+#current-display {
     text-align: right;
-
-    font-size: clamp(32px, 8vw, 42px);
-    font-weight: 600;
-
-    letter-spacing: -1.5px;
-
+    font-size: 40px;
     margin-top: 8px;
-
     overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
 }
 
-.display-footer {
-    margin-top: 15px;
-
-    font-size: 9px;
-    font-weight: 600;
-
-    letter-spacing: 1.5px;
+.display-bottom {
+    display: flex;
+    justify-content: space-between;
     color: #69718e;
+    font-size: 9px;
+    margin-top: 15px;
 }
 
 
-/* =========================
-   KEYPAD
-========================= */
+/* BUTTON GRID */
 
-.keypad {
+.buttons {
     display: grid;
-
     grid-template-columns: repeat(4, 1fr);
-
     gap: 12px;
 }
 
 
-/* =========================
-   GENERAL BUTTONS
-========================= */
+/* ALL BUTTONS */
 
-.key {
+button {
     height: 65px;
-
     border: none;
-    border-radius: 16px;
-
-    font-family: inherit;
+    border-radius: 15px;
     font-size: 19px;
     font-weight: 600;
-
+    font-family: inherit;
     cursor: pointer;
-
-    transition:
-        background 0.2s ease,
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
+    transition: 0.2s;
 }
 
-.key:active {
+button:hover {
+    filter: brightness(1.2);
+}
+
+button:active {
     transform: scale(0.94);
 }
 
 
-/* =========================
-   NUMBER BUTTONS
-========================= */
+/* NUMBER BUTTONS */
 
-.number-key {
+.number {
     background: #252b46;
-    color: #f0f1fa;
-}
-
-.number-key:hover {
-    background: #323a5b;
+    color: white;
 }
 
 
-/* =========================
-   FUNCTION BUTTONS
-========================= */
+/* FUNCTION BUTTONS */
 
-.function-key {
+.function {
     background: #343052;
     color: #b9a8ff;
 }
 
-.function-key:hover {
-    background: #49406f;
-}
 
+/* OPERATOR BUTTONS */
 
-/* =========================
-   OPERATOR BUTTONS
-========================= */
-
-.operator-key {
-    background: rgba(113, 83, 228, 0.17);
+.operator {
+    background: #302957;
     color: #a993ff;
-
-    border: 1px solid rgba(141, 113, 255, 0.15);
-}
-
-.operator-key:hover {
-    background: rgba(113, 83, 228, 0.35);
 }
 
 
-/* =========================
-   EQUALS BUTTON
-========================= */
+/* EQUALS BUTTON */
 
-.equals-key {
-    background: linear-gradient(
-        135deg,
-        #8055f7,
-        #477af4
-    );
-
-    color: #ffffff;
-
-    box-shadow:
-        0 8px 20px rgba(105, 77, 237, 0.25);
-}
-
-.equals-key:hover {
-    background: linear-gradient(
-        135deg,
-        #946eff,
-        #5c8cff
-    );
-
-    box-shadow:
-        0 8px 25px rgba(105, 77, 237, 0.4);
+.equals {
+    background: linear-gradient(135deg, #8055f7, #477af4);
+    color: white;
 }
 
 
-/* =========================
-   ZERO BUTTON
-========================= */
+/* ZERO BUTTON */
 
-.zero-key {
+.zero {
     grid-column: span 2;
 }
 
 
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
-.calculator-footer {
+.footer {
     display: flex;
     justify-content: space-between;
-
     margin-top: 25px;
     padding-top: 18px;
-
-    border-top: 1px solid rgba(255, 255, 255, 0.06);
-
+    border-top: 1px solid #303653;
     color: #6e7592;
     font-size: 10px;
 }
 
 
-/* =========================
-   COPYRIGHT
-========================= */
+/* COPYRIGHT */
 
 .copyright {
-    margin-top: 25px;
-
-    font-size: 11px;
     color: #606783;
-
+    font-size: 11px;
+    margin-top: 25px;
     text-align: center;
 }
 
 
-/* =========================
-   RESPONSIVE DESIGN
-========================= */
+/* MOBILE RESPONSIVENESS */
 
 @media (max-width: 420px) {
 
     .calculator {
         padding: 18px;
-        border-radius: 23px;
     }
 
-    .keypad {
+    .buttons {
         gap: 9px;
     }
 
-    .key {
+    button {
         height: 60px;
-        border-radius: 13px;
-        font-size: 18px;
-    }
-
-    .display-section {
-        padding: 17px;
-    }
-
-}
-
-@media (max-width: 340px) {
-
-    .key {
-        height: 53px;
-    }
-
-    .calculator {
-        padding: 14px;
     }
 
 }
