@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexa | Smart Calculator</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <main class="app-container">
+
+        <div class="calculator">
+
+            <!-- Header -->
+            <header class="calculator-header">
+                <div class="brand">
+                    <div class="brand-icon">N</div>
+                    <div>
+                        <h2>Nexa</h2>
+                        <span>SMART CALCULATOR</span>
+                    </div>
+                </div>
+
+                <button class="theme-button" type="button">
+                    ☼
+                </button>
+            </header>
+
+
+            <!-- Display -->
+            <section class="display-section">
+
+                <div class="display-label">
+                    <span>DISPLAY</span>
+                    <span class="status">
+                        <span class="status-dot"></span>
+                        READY
+                    </span>
+                </div>
+
+                <div class="previous-value" id="previous-value">
+                    0
+                </div>
+
+                <div class="current-value" id="display">
+                    0
+                </div>
+
+                <div class="display-footer">
+                    <span>RESULT</span>
+                    <span>DEC</span>
+                </div>
+
+            </section>
+
+
+            <!-- Keypad -->
+            <section class="keypad">
+
+                <!-- First Row -->
+                <button class="key function-key" data-action="clear" type="button">
+                    AC
+                </button>
+
+                <button class="key function-key" data-action="delete" type="button">
+                    DEL
+                </button>
+
+                <button class="key function-key" data-action="percent" type="button">
+                    %
+                </button>
+
+                <button class="key operator-key" data-operator="/" type="button">
+                    ÷
+                </button>
+
+
+                <!-- Second Row -->
+                <button class="key number-key" data-number="7" type="button">
+                    7
+                </button>
+
+                <button class="key number-key" data-number="8" type="button">
+                    8
+                </button>
+
+                <button class="key number-key" data-number="9" type="button">
+                    9
+                </button>
+
+                <button class="key operator-key" data-operator="*" type="button">
+                    ×
+                </button>
+
+
+                <!-- Third Row -->
+                <button class="key number-key" data-number="4" type="button">
+                    4
+                </button>
+
+                <button class="key number-key" data-number="5" type="button">
+                    5
+                </button>
+
+                <button class="key number-key" data-number="6" type="button">
+                    6
+                </button>
+
+                <button class="key operator-key" data-operator="-" type="button">
+                    −
+                </button>
+
+
+                <!-- Fourth Row -->
+                <button class="key number-key" data-number="1" type="button">
+                    1
+                </button>
+
+                <button class="key number-key" data-number="2" type="button">
+                    2
+                </button>
+
+                <button class="key number-key" data-number="3" type="button">
+                    3
+                </button>
+
+                <button class="key operator-key" data-operator="+" type="button">
+                    +
+                </button>
+
+
+                <!-- Fifth Row -->
+                <button class="key number-key zero-key" data-number="0" type="button">
+                    0
+                </button>
+
+                <button class="key number-key" data-action="decimal" type="button">
+                    .
+                </button>
+
+                <button class="key equals-key" data-action="calculate" type="button">
+                    =
+                </button>
+
+            </section>
+
+
+            <!-- Footer -->
+            <footer class="calculator-footer">
+                <span>Designed with precision</span>
+                <span>v1.0.0</span>
+            </footer>
+
+        </div>
+
+        <p class="copyright">
+            © 2026 Nexa Calculator. All rights reserved.
+        </p>
+
+    </main>
+
+</body>
+</html>
