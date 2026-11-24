@@ -37,6 +37,10 @@ let operator = "";
 
 operatorButtons.forEach(function (button) {
   button.addEventListener("click", function () {
+    if (operator !== "") {
+      calculate();
+    }
+
     firstNumber = Number(display.innerHTML);
     operator = button.innerHTML;
 
@@ -70,6 +74,7 @@ function calculate() {
   }
 
   display.innerHTML = result;
+  firstNumber = result;
   operator = "";
 }
 
