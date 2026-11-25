@@ -27,6 +27,7 @@ function addTask() {
   task.push(taskInput);
   document.getElementById("task").value = "";
 
+  saveTask();
   displayTasks();
 }
 
@@ -37,11 +38,27 @@ function clearAll() {
     return;
   }
 
+  saveTask();
   displayTasks();
 }
 
 function removeTask() {
     task.splice(i, 1);
-
+    saveTask()
     displayTasks();
 }
+
+function saveTask() {
+    localStorage.setItem('task', JSON.stringify(task))
+}
+
+function loadTask() {
+    let saved = localStorage.getItem('task');
+
+    if (saved !== null) {
+        task = JSON.parse(saved)
+    }
+}
+
+loadTask();
+displayTasks()
