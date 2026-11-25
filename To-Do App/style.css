@@ -1,0 +1,148 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f1efff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Main form */
+form {
+    width: 100%;
+    max-width: 450px;
+    background: white;
+    padding: 30px;
+    border-radius: 18px 18px 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    box-shadow: 0 10px 35px rgba(70, 50, 130, 0.08);
+}
+
+label {
+    font-size: 28px;
+    font-weight: bold;
+    color: #39276d;
+    text-align: center;
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ded9f5;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15px;
+    background: #faf9ff;
+    color: #333;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #7856db;
+    box-shadow: 0 0 0 3px rgba(120, 86, 219, 0.12);
+}
+
+input::placeholder {
+    color: #aaa;
+}
+
+/* Buttons */
+button {
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+body > button:nth-of-type(1) {
+    width: 100%;
+    max-width: 450px;
+    padding: 15px;
+    background: #7856db;
+    color: white;
+    font-size: 16px;
+}
+
+body > button:nth-of-type(1):hover {
+    background: #6040bf;
+}
+
+/* Task list */
+ul {
+    width: 100%;
+    max-width: 450px;
+    background: white;
+    padding: 15px 30px;
+    list-style: none;
+    color: #999;
+    font-size: 14px;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #eeeaf9;
+    border-radius: 10px;
+    background: #faf9ff;
+    color: #39304f;
+    font-size: 15px;
+    overflow-wrap: anywhere;
+}
+
+li button {
+    flex-shrink: 0;
+    background: #ffe8e8;
+    color: #e34d4d;
+    padding: 9px 12px;
+    border-radius: 7px;
+    font-size: 12px;
+}
+
+li button:hover {
+    background: #ffd2d2;
+}
+
+/* Clear button */
+body > button:nth-of-type(2) {
+    width: 100%;
+    max-width: 450px;
+    padding: 15px;
+    background: #39276d;
+    color: white;
+    font-size: 14px;
+    border-radius: 0 0 18px 18px;
+}
+
+body > button:nth-of-type(2):hover {
+    background: #25194b;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+    form {
+        padding: 25px 20px;
+    }
+
+    label {
+        font-size: 24px;
+    }
+
+    ul {
+        padding: 15px 20px;
+    }
+}
