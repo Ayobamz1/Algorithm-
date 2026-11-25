@@ -1,0 +1,204 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7f5;
+    color: #222;
+    padding: 30px 15px;
+}
+
+.container {
+    max-width: 950px;
+    margin: auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #15803d;
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+header p {
+    color: #777;
+}
+
+section {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* Budget Section */
+
+.budget-input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    outline: none;
+    font-size: 15px;
+}
+
+input:focus {
+    border-color: #15803d;
+}
+
+button {
+    background: #15803d;
+    color: white;
+    padding: 13px;
+    border: none;
+    border-radius: 7px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #166534;
+}
+
+/* Summary Section */
+
+.summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    background: transparent;
+    padding: 0;
+    box-shadow: none;
+}
+
+.summary-card {
+    background: white;
+    padding: 22px;
+    border-radius: 10px;
+    border-left: 4px solid #15803d;
+}
+
+.summary-card h3 {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.summary-card p {
+    font-size: 23px;
+    font-weight: bold;
+    color: #15803d;
+}
+
+/* Add Item Section */
+
+.form-group {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 18px;
+}
+
+.form-group div {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.add-section button {
+    width: 100%;
+}
+
+/* Shopping List */
+
+.list-header {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 0.8fr;
+    gap: 10px;
+    padding: 13px 8px;
+    background: #f0f5f1;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+#shoppingList {
+    margin-top: 10px;
+}
+
+.empty-message {
+    text-align: center;
+    color: #999;
+    padding: 30px 10px;
+}
+
+/* Responsive Design */
+
+@media (max-width: 650px) {
+
+    body {
+        padding: 20px 10px;
+    }
+
+    .summary {
+        grid-template-columns: 1fr;
+    }
+
+    .form-group {
+        grid-template-columns: 1fr;
+    }
+
+    .list-header {
+        font-size: 10px;
+        gap: 4px;
+    }
+
+    .summary-card {
+        padding: 17px;
+    }
+}
+
+
+.item-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 0.8fr;
+    gap: 10px;
+    padding: 15px 8px;
+    border-bottom: 1px solid #eee;
+    align-items: center;
+    font-size: 14px;
+}
+
+#budgetWarning {
+  color: red;
+  font-weight: bold;
+}
+
+#clearAllItems {
+    margin-top: 10px;
+}
