@@ -9,7 +9,7 @@ function displayTasks() {
       task[i] +
       "<button onclick='removeTask(" +
       i +
-      ")'></button></li>";
+      ")'>X</button></li>";
   }
 
   let display = document.getElementById("list");
@@ -19,7 +19,7 @@ function displayTasks() {
 function addTask() {
   let taskInput = document.getElementById("task").value;
 
-  if (taskInput === "") {
+  if (taskInput.trim() === "")  {
     alert("Enter a task werey");
     return;
   }
@@ -32,19 +32,15 @@ function addTask() {
 }
 
 function clearAll() {
-  if (task = []) {
-    let display = document.getElementById("list");
-    display.innerHTML = "Your task will display here";
-    return;
-  }
+    task = [];
 
-  saveTask();
-  displayTasks();
+    saveTask();
+    displayTasks();
 }
 
-function removeTask() {
+function removeTask(i) {
     task.splice(i, 1);
-    saveTask()
+    saveTask();
     displayTasks();
 }
 
