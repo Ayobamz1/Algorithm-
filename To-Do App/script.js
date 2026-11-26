@@ -1,4 +1,4 @@
-let task = [];
+let task = JSON.parse(localStorage.getItem("task")) || [];
 
 function displayTasks() {
   let input = "";
@@ -32,10 +32,16 @@ function addTask() {
 }
 
 function clearAll() {
-  task = [];
+  let check = confirm("Are you sure you wanna delete this");
 
-  saveTask();
-  displayTasks();
+  if (check) {
+    task = [];
+
+    saveTask();
+    displayTasks();
+  } else {
+    return;
+  }
 }
 
 function removeTask(i) {
@@ -53,14 +59,3 @@ function removeTask(i) {
 function saveTask() {
   localStorage.setItem("task", JSON.stringify(task));
 }
-
-function loadTask() {
-  let saved = localStorage.getItem("task");
-
-  if (saved !== null) {
-    task = JSON.parse(saved);
-  }
-}
-
-loadTask();
-displayTasks();
